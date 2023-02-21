@@ -39,7 +39,6 @@ public class BoatPushScript : MonoBehaviour
         Vector3 impact = transform.position;
         impact.y = 0;
 
-
         Vector3 direction = _playerTransform.position - impact;
         direction.y = 0;
 

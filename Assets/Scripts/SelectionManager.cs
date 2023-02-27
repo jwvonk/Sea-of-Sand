@@ -12,9 +12,11 @@ public class SelectionManager : MonoBehaviour
     private Transform fluidizableObj;
     private Transform _selection;
     private bool isSelected = false;
+    private Collider _fluidCollider;
 
     private void Start()
     {
+        _fluidCollider = GameObject.FindGameObjectWithTag("Fluid").GetComponent<Collider>();
     }
 
     private void Update() {
@@ -51,9 +53,12 @@ public class SelectionManager : MonoBehaviour
         }
         // here
         if (Keyboard.current.eKey.wasPressedThisFrame && isSelected) {
-            var objrigidbody = fluidizableObj.GetComponent<Rigidbody>();
-            if (objrigidbody != null) {
-                objrigidbody.useGravity = true;
+            var objRigidbody = fluidizableObj.GetComponent<Rigidbody>();
+            var objBoxcollider = fluidizableObj.GetComponent<BoxCollider>(); 
+            if (objRigidbody != null) {
+                objRigidbody.useGravity = true;
+                Physics.IgnoreCollision(objBoxcollider, _fluidCollider, false);
+                objBoxcollider.isTrigger = true;
             }
         }
     }

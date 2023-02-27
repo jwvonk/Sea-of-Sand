@@ -18,6 +18,7 @@ public class BoatPushScript : MonoBehaviour
     {
         _playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         _fluidTransform = GameObject.FindGameObjectWithTag("Fluid").GetComponent<Transform>();
+        Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), GameObject.FindGameObjectWithTag("Fluid").GetComponent<Collider>());
     }
 
     // Update is called once per frame
@@ -26,12 +27,10 @@ public class BoatPushScript : MonoBehaviour
 
     }
 
-
     private void OnTriggerEnter(Collider collision)
     {
         StartCoroutine(raise());
         StartCoroutine(push());
-
     }
 
     private IEnumerator push()

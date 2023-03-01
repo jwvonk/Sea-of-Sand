@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18148229, g: 0.2271159, b: 0.3073962, a: 1}
+  m_IndirectSpecularColor: {r: 0.18148178, g: 0.22711569, b: 0.30739558, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -860,9 +860,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5dceebffff3eb4387313692d7c5b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fluidTransform: {fileID: 0}
-  _playerTransform: {fileID: 0}
-  _controller: {fileID: 0}
   pushSpeed: 10
   pushDist: 10
   riseSpeed: 10
@@ -2042,9 +2039,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5dceebffff3eb4387313692d7c5b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fluidTransform: {fileID: 0}
-  _playerTransform: {fileID: 0}
-  _controller: {fileID: 0}
   pushSpeed: 10
   pushDist: 20
   riseSpeed: 10
@@ -2546,9 +2540,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5dceebffff3eb4387313692d7c5b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fluidTransform: {fileID: 0}
-  _playerTransform: {fileID: 0}
-  _controller: {fileID: 0}
   pushSpeed: 10
   pushDist: 13
   riseSpeed: 10
@@ -2704,7 +2695,7 @@ MonoBehaviour:
   pushLayers:
     serializedVersion: 2
     m_Bits: 0
-  canPush: 1
+  canPush: 0
   strength: 0.5
 --- !u!4 &6693752969211837549
 Transform:
@@ -3346,9 +3337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5dceebffff3eb4387313692d7c5b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fluidTransform: {fileID: 0}
-  _playerTransform: {fileID: 0}
-  _controller: {fileID: 0}
   pushSpeed: 10
   pushDist: 10
   riseSpeed: 10

@@ -17,6 +17,7 @@ public class BoatPushScript : MonoBehaviour
     public float riseSpeed = 50;
     public float riseDist = 10;
 
+    private bool trigger = false;
     private bool riseComplete = false;
     private bool pushComplete = false;
 
@@ -40,8 +41,14 @@ public class BoatPushScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        StartCoroutine(raise());
-        StartCoroutine(push());
+        Debug.Log("Triggered");
+        if (!trigger)
+        {
+            StartCoroutine(raise());
+            StartCoroutine(push());
+            trigger = true;
+        }
+        
     }
 
     private IEnumerator push()
@@ -103,15 +110,15 @@ public class BoatPushScript : MonoBehaviour
         float targetLevel = _fluidTransform.position.y + riseDist;
         while (_fluidTransform.position.y < targetLevel)
         {
-            if (_fluidTransform.position.y + (riseSpeed * Time.deltaTime) < targetLevel)
+            if (_fluidTransform.position.y + (riseSpeed * Time.deltaTime) < targetLevel) // Increment is small enough
             {
-                _playerTransform.position += new Vector3(0f, riseSpeed, 0f) * Time.deltaTime;
-                _fluidTransform.position += new Vector3(0f, riseSpeed, 0f) * Time.deltaTime;
+                _playerTransform.position += new Vector3(0f, riseSpeed, 0f) * Time.deltaTime; //raise player by increment
+                _fluidTransform.position += new Vector3(0f, riseSpeed, 0f) * Time.deltaTime; //raise fluid by increment
             }
-            else
+            else // increment is too large
             {
-                _playerTransform.position = new Vector3(_playerTransform.position.x, targetLevel, _playerTransform.position.z);
-                _fluidTransform.position = new Vector3(_fluidTransform.position.x, targetLevel, _fluidTransform.position.z);
+                _playerTransform.position = new Vector3(_playerTransform.position.x, targetLevel, _playerTransform.position.z); //raise player to target level
+                _fluidTransform.position = new Vector3(_fluidTransform.position.x, targetLevel, _fluidTransform.position.z); // raise fluid to target level
             }
                
             yield return null;

@@ -9,13 +9,18 @@ public class BoatPushScript : MonoBehaviour
 {
 
     //public Transform _playerTransform;
-    public Transform _fluidTransform;
-    public Transform _playerTransform;
-    public CharacterController _controller;
+    private Transform _fluidTransform;
+    private Transform _playerTransform;
+    private CharacterController _controller;
     public float pushSpeed = 10;
     public float pushDist = 10;
     public float riseSpeed = 50;
     public float riseDist = 10;
+
+    private bool riseComplete = false;
+    private bool pushComplete = false;
+
+
     void Start()
     {
         _playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -27,7 +32,10 @@ public class BoatPushScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (riseComplete && pushComplete)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -62,7 +70,7 @@ public class BoatPushScript : MonoBehaviour
             dist += move;
             yield return null;
         }
-        Destroy(gameObject);
+        pushComplete = true;
 
 
 
@@ -108,5 +116,6 @@ public class BoatPushScript : MonoBehaviour
                
             yield return null;
         }
+        riseComplete = true;
     }
 }

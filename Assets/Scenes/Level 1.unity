@@ -2207,6 +2207,11 @@ MonoBehaviour:
   GroundLayers:
     serializedVersion: 2
     m_Bits: 513
+  Floating: 1
+  FloatLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  FloatingOffset: -0.4
   CinemachineCameraTarget: {fileID: 8711133858249021392}
   TopClamp: 89
   BottomClamp: -89

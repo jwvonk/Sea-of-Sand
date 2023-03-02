@@ -569,9 +569,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5dceebffff3eb4387313692d7c5b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fluidTransform: {fileID: 0}
-  _playerTransform: {fileID: 0}
-  _controller: {fileID: 0}
   pushSpeed: 10
   pushDist: 10
   riseSpeed: 10
@@ -1569,6 +1566,11 @@ MonoBehaviour:
   GroundLayers:
     serializedVersion: 2
     m_Bits: 513
+  Floating: 0
+  FloatLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  FloatingOffset: -0.45
   CinemachineCameraTarget: {fileID: 8711133858249021392}
   TopClamp: 89
   BottomClamp: -89
@@ -2491,9 +2493,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5dceebffff3eb4387313692d7c5b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fluidTransform: {fileID: 0}
-  _playerTransform: {fileID: 0}
-  _controller: {fileID: 0}
   pushSpeed: 10
   pushDist: 10
   riseSpeed: 10

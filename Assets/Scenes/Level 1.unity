@@ -2040,7 +2040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pushSpeed: 10
-  pushDist: 20
+  pushDist: 25
   riseSpeed: 10
   riseDist: 3
 --- !u!143 &3896230653904711297
@@ -2546,9 +2546,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pushSpeed: 10
-  pushDist: 13
+  pushDist: 22
   riseSpeed: 10
-  riseDist: 0.9
+  riseDist: 1.8
 --- !u!65 &6357020966020037712
 BoxCollider:
   m_ObjectHideFlags: 0

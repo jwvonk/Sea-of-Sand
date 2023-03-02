@@ -301,7 +301,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectableTag: Selectable
   highlightMaterial: {fileID: 2100000, guid: ff188f58422043f489060e28a5e4e0c0, type: 2}
-  defaultMaterial: {fileID: 2100000, guid: 7ab977a21c92388468ee65ad1c0e5a78, type: 2}
+  defaultMaterial: {fileID: -3595142043378480906, guid: 865dc273cf497164586fb686b56e1476,
+    type: 3}
 --- !u!4 &668076577
 Transform:
   m_ObjectHideFlags: 0
@@ -1832,7 +1833,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472949280581719254}
   m_LocalRotation: {x: 0.26655576, y: 0.6550366, z: 0.654808, w: -0.26664883}
-  m_LocalPosition: {x: -1.05, y: 8.22, z: -0.15}
+  m_LocalPosition: {x: 0.09, y: 7.07, z: -0.15}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1859,7 +1860,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8432944837027354815, guid: 865dc273cf497164586fb686b56e1476, type: 3}
+  - {fileID: 2100000, guid: 26974a71238a201468c487aa8b8f808d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
